@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3538DAE7795BF1130A3FAF9E /* Pods_AppleMusicRemake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E9B4B1DBE632797134217B2 /* Pods_AppleMusicRemake.framework */; };
 		96FA88A320D748E100A8A819 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA88A220D748E100A8A819 /* AppDelegate.swift */; };
 		96FA88A520D748E100A8A819 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA88A420D748E100A8A819 /* ViewController.swift */; };
 		96FA88A820D748E100A8A819 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FA88A620D748E100A8A819 /* Main.storyboard */; };
 		96FA88AA20D748E300A8A819 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96FA88A920D748E300A8A819 /* Assets.xcassets */; };
 		96FA88AD20D748E300A8A819 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FA88AB20D748E300A8A819 /* LaunchScreen.storyboard */; };
+		96FA88B520D7493100A8A819 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA88B420D7493100A8A819 /* MainTabBarController.swift */; };
+		96FA88B820D75FCB00A8A819 /* MusicSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA88B720D75FCB00A8A819 /* MusicSearchController.swift */; };
+		96FA88BC20D7619800A8A819 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA88BB20D7619800A8A819 /* Music.swift */; };
+		96FA88C120D7809700A8A819 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA88C020D7809700A8A819 /* APIService.swift */; };
+		96FA88C420D7864B00A8A819 /* MusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96FA88C320D7864B00A8A819 /* MusicCell.xib */; };
+		96FA88C620D7885300A8A819 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA88C520D7885300A8A819 /* MusicCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33FD5AB9A7FF560C782F5DE7 /* Pods-AppleMusicRemake.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleMusicRemake.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppleMusicRemake/Pods-AppleMusicRemake.debug.xcconfig"; sourceTree = "<group>"; };
+		8C33B8DE94006DCBFEB4196C /* Pods-AppleMusicRemake.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleMusicRemake.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppleMusicRemake/Pods-AppleMusicRemake.release.xcconfig"; sourceTree = "<group>"; };
+		8E9B4B1DBE632797134217B2 /* Pods_AppleMusicRemake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleMusicRemake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96FA889F20D748E100A8A819 /* AppleMusicRemake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleMusicRemake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96FA88A220D748E100A8A819 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96FA88A420D748E100A8A819 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +32,12 @@
 		96FA88A920D748E300A8A819 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96FA88AC20D748E300A8A819 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96FA88AE20D748E300A8A819 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96FA88B420D7493100A8A819 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		96FA88B720D75FCB00A8A819 /* MusicSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchController.swift; sourceTree = "<group>"; };
+		96FA88BB20D7619800A8A819 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		96FA88C020D7809700A8A819 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		96FA88C320D7864B00A8A819 /* MusicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicCell.xib; sourceTree = "<group>"; };
+		96FA88C520D7885300A8A819 /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +45,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3538DAE7795BF1130A3FAF9E /* Pods_AppleMusicRemake.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6BC84D8C1FEAA7445B829A67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E9B4B1DBE632797134217B2 /* Pods_AppleMusicRemake.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		96FA889620D748E100A8A819 = {
 			isa = PBXGroup;
 			children = (
 				96FA88A120D748E100A8A819 /* AppleMusicRemake */,
 				96FA88A020D748E100A8A819 /* Products */,
+				FC86E3E92325BF04E1E8D7E1 /* Pods */,
+				6BC84D8C1FEAA7445B829A67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +81,61 @@
 		96FA88A120D748E100A8A819 /* AppleMusicRemake */ = {
 			isa = PBXGroup;
 			children = (
+				96FA88C220D7862D00A8A819 /* Views */,
+				96FA88BF20D7808200A8A819 /* API */,
+				96FA88BA20D7617D00A8A819 /* Models */,
+				96FA88B620D75F9B00A8A819 /* Controllers */,
 				96FA88A220D748E100A8A819 /* AppDelegate.swift */,
 				96FA88A420D748E100A8A819 /* ViewController.swift */,
+				96FA88B420D7493100A8A819 /* MainTabBarController.swift */,
 				96FA88A620D748E100A8A819 /* Main.storyboard */,
 				96FA88A920D748E300A8A819 /* Assets.xcassets */,
 				96FA88AB20D748E300A8A819 /* LaunchScreen.storyboard */,
 				96FA88AE20D748E300A8A819 /* Info.plist */,
 			);
 			path = AppleMusicRemake;
+			sourceTree = "<group>";
+		};
+		96FA88B620D75F9B00A8A819 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				96FA88B720D75FCB00A8A819 /* MusicSearchController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		96FA88BA20D7617D00A8A819 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96FA88BB20D7619800A8A819 /* Music.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		96FA88BF20D7808200A8A819 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				96FA88C020D7809700A8A819 /* APIService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		96FA88C220D7862D00A8A819 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96FA88C320D7864B00A8A819 /* MusicCell.xib */,
+				96FA88C520D7885300A8A819 /* MusicCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FC86E3E92325BF04E1E8D7E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33FD5AB9A7FF560C782F5DE7 /* Pods-AppleMusicRemake.debug.xcconfig */,
+				8C33B8DE94006DCBFEB4196C /* Pods-AppleMusicRemake.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96FA88B120D748E300A8A819 /* Build configuration list for PBXNativeTarget "AppleMusicRemake" */;
 			buildPhases = (
+				0C73F658142423EDE5C31B57 /* [CP] Check Pods Manifest.lock */,
 				96FA889B20D748E100A8A819 /* Sources */,
 				96FA889C20D748E100A8A819 /* Frameworks */,
 				96FA889D20D748E100A8A819 /* Resources */,
+				1A506E86E95B082AD05473D6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,10 +201,52 @@
 				96FA88AD20D748E300A8A819 /* LaunchScreen.storyboard in Resources */,
 				96FA88AA20D748E300A8A819 /* Assets.xcassets in Resources */,
 				96FA88A820D748E100A8A819 /* Main.storyboard in Resources */,
+				96FA88C420D7864B00A8A819 /* MusicCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C73F658142423EDE5C31B57 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppleMusicRemake-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1A506E86E95B082AD05473D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AppleMusicRemake/Pods-AppleMusicRemake-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppleMusicRemake/Pods-AppleMusicRemake-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		96FA889B20D748E100A8A819 /* Sources */ = {
@@ -136,7 +254,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				96FA88A520D748E100A8A819 /* ViewController.swift in Sources */,
+				96FA88B820D75FCB00A8A819 /* MusicSearchController.swift in Sources */,
+				96FA88C620D7885300A8A819 /* MusicCell.swift in Sources */,
+				96FA88BC20D7619800A8A819 /* Music.swift in Sources */,
 				96FA88A320D748E100A8A819 /* AppDelegate.swift in Sources */,
+				96FA88C120D7809700A8A819 /* APIService.swift in Sources */,
+				96FA88B520D7493100A8A819 /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,15 +401,13 @@
 		};
 		96FA88B220D748E300A8A819 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33FD5AB9A7FF560C782F5DE7 /* Pods-AppleMusicRemake.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9D6AF4J265;
 				INFOPLIST_FILE = AppleMusicRemake/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kendallmccaskill.AppleMusicRemake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +417,13 @@
 		};
 		96FA88B320D748E300A8A819 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C33B8DE94006DCBFEB4196C /* Pods-AppleMusicRemake.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9D6AF4J265;
 				INFOPLIST_FILE = AppleMusicRemake/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kendallmccaskill.AppleMusicRemake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -1,0 +1,12 @@
+node_modules/
+dist/
+coverage/
+*.local
+.DS_Store
+
+# Tauri
+apps/desktop/src-tauri/target/
+apps/desktop/src-tauri/gen/
+
+# Client data must never be committed
+*.8949c

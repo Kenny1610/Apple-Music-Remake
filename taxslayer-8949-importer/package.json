@@ -1,0 +1,22 @@
+{
+  "name": "taxslayer-8949-importer-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Turn broker/exchange CSVs and 1099-B PDFs into TaxSlayer Pro Desktop Form 8949 summary totals + attachable statement PDFs",
+  "scripts": {
+    "test": "pnpm -r --if-present test",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "dev": "pnpm --filter @tsp8949/desktop dev",
+    "build": "pnpm --filter @tsp8949/desktop build",
+    "tauri": "pnpm --filter @tsp8949/desktop tauri"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -56,6 +56,21 @@ apps/desktop      Tauri v2 + React + Vite app. Wizard UI (Client → Import → 
                   (pdf-lib), platform layer (file dialogs, presets, clipboard).
 ```
 
+## Testing on your PC (no dev tools needed)
+
+Every push to `main` (and any manual "Run workflow" from the Actions tab) builds a Windows
+installer in CI:
+
+1. Open the repository's **Actions** tab → latest green **CI** run → **Artifacts** →
+   download `installers-windows-latest`.
+2. Unzip and run the `.msi` (or NSIS `.exe`). The build is not code-signed yet, so Windows
+   SmartScreen will warn — click **More info → Run anyway**.
+3. Test with a real broker export, or grab
+   `packages/core/test/fixtures/fidelity-style.csv` from this repo for a known-good sample
+   (it exercises preamble skipping, wash sales, "Various" dates, and a totals row).
+4. For the entry-mode keystroke test, follow the manual script below — try Notepad before
+   TaxSlayer Pro.
+
 ## Development
 
 Prereqs: Node 20+, pnpm 10, Rust stable (for the Tauri shell).

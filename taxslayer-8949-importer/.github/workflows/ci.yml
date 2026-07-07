@@ -1,15 +1,11 @@
 name: CI
 
-# NOTE: written for this project living at the repository root (its own repo).
-# While the project is temporarily nested inside Apple-Music-Remake this
-# workflow does not trigger (branch filter), and the .github folder should be
-# moved to the new repo root during migration.
-
 on:
   push:
     branches: [main]
     tags: ['v*']
   pull_request:
+  workflow_dispatch:
 
 jobs:
   check:

@@ -9,14 +9,20 @@ import {
 } from '@tsp8949/core';
 import { useMemo, useState } from 'react';
 import { CopyField } from '../components/CopyField';
+import { buildQueue } from '../entry/buildQueue';
 import { generateStatements } from '../pdf/form8949Pdf';
+import { HOTKEY_NEXT } from '../platform/entryMode';
 import { saveFile } from '../platform/files';
+import { useEntryModeStore } from '../state/entryModeStore';
 import { useSessionStore } from '../state/sessionStore';
 
 export function TotalsExportScreen() {
   const { session, setRoundingMode } = useSessionStore();
+  const startEntryMode = useEntryModeStore((s) => s.start);
   const [status, setStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [includeGainLoss, setIncludeGainLoss] = useState(false);
+  const [autoTab, setAutoTab] = useState(true);
 
   const totals = useMemo(
     () => (session ? nonEmptyTotals(summarize(session.batches, session.roundingMode)) : []),
@@ -115,6 +121,47 @@ export function TotalsExportScreen() {
             <CopyField label="Gain/loss" value={fmt(t.gainLoss)} negative={t.gainLoss < 0} />
           </div>
         ))}
+      </div>
+
+      <div className="card entry-start-card">
+        <h3>Hands-free entry into TaxSlayer Pro</h3>
+        <p className="screen-intro">
+          Start entry mode, click into the first TaxSlayer field, and press <kbd>{HOTKEY_NEXT}</kbd>{' '}
+          — each value is typed for you, no manual entry.
+        </p>
+        <div className="actions">
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={() =>
+              startEntryMode(
+                buildQueue(summarize(session.batches, session.roundingMode), {
+                  roundingMode: session.roundingMode,
+                  includeGainLoss,
+                }),
+                autoTab,
+              )
+            }
+          >
+            Start TaxSlayer entry mode
+          </button>
+          <label className="entry-option">
+            <input
+              type="checkbox"
+              checked={autoTab}
+              onChange={(e) => setAutoTab(e.target.checked)}
+            />
+            Tab after each value
+          </label>
+          <label className="entry-option">
+            <input
+              type="checkbox"
+              checked={includeGainLoss}
+              onChange={(e) => setIncludeGainLoss(e.target.checked)}
+            />
+            Also type gain/loss (TaxSlayer usually computes it)
+          </label>
+        </div>
       </div>
 
       <div className="actions">

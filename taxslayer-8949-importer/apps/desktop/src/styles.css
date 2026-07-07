@@ -549,3 +549,93 @@ select:focus {
   line-height: 1.7;
   padding: 0;
 }
+
+/* ---- TaxSlayer entry mode ---- */
+.entry-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 16px;
+  min-height: 100vh;
+  background: #10243e;
+  color: #dce6f2;
+}
+.entry-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.entry-panel-head strong {
+  color: #fff;
+  font-size: 14px;
+}
+.entry-next {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.entry-next-label {
+  font-size: 12px;
+  color: #9db3cc;
+}
+.entry-next-value {
+  font-size: 22px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #fff;
+}
+.entry-hint {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #9db3cc;
+  margin: 0;
+}
+.entry-hint kbd {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 11px;
+  color: #fff;
+}
+.entry-panel-actions {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.entry-tab-toggle {
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #c7d5e5;
+}
+.entry-fallback-list {
+  background: #fff;
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+.entry-panel .error-banner,
+.entry-panel .warn-banner {
+  font-size: 12px;
+}
+.entry-start-card kbd {
+  background: var(--line);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 12px;
+}
+.entry-option {
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--muted);
+}

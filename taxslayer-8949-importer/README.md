@@ -37,6 +37,12 @@ data (names, SSNs) exists only in the `.8949c` session files and PDFs the prepar
   proceeds − basis + adjustment, and per-transaction IRS whole-dollar rounding so the grid,
   the totals cards, and the PDF always agree to the penny.
 - **Client sessions**: save/reopen a `.8949c` file per client; unsaved-changes guard.
+- **TaxSlayer entry mode (hands-free)**: instead of typing the summary totals into TaxSlayer
+  Pro, start entry mode — the app becomes a small always-on-top panel showing the next value,
+  you click into the TaxSlayer field and press **Ctrl+Shift+V**, and the app types the value
+  for you (real Windows keystrokes into whatever field has focus — works with any TaxSlayer
+  version), optionally followed by Tab. **Ctrl+Shift+Q** stops; the queue walks every box's
+  proceeds → cost basis → adjustment in order and the window restores itself when done.
 
 ## Project layout
 
@@ -76,6 +82,26 @@ clipboard on Windows.
 - End-to-end: the wizard has been driven headlessly (Playwright) from client creation through
   CSV imports, grid editing, categorization, and PDF generation, with the output PDF verified
   against hand-computed totals.
+
+### Manual test script for entry mode (Windows only)
+
+Keystroke synthesis can only be validated on a real Windows machine — run this once per
+release build:
+
+1. Reach Totals & Export with at least two non-empty boxes; click **Start TaxSlayer entry
+   mode**. The window should shrink to a small always-on-top panel (min-size limit lifted).
+2. Open Notepad (stand-in for TaxSlayer), click into it, press **Ctrl+Shift+V** — the first
+   value should appear with no stray characters. Hold Ctrl+Shift down deliberately long: the
+   typed text must still be clean (modifier-race guard).
+3. Toggle "Tab after each value" off and on; confirm the Tab keystroke follows accordingly.
+4. Press the hotkey while the panel itself is focused → it should warn instead of typing.
+5. Rapid-fire the hotkey → values must come out one at a time, in order (typing guard).
+6. **Ctrl+Shift+Q** and the Stop button must both restore the original window size/position.
+7. Run the full queue to exhaustion → mode auto-stops and the wizard returns.
+8. With another app owning Ctrl+Shift+V (e.g. register it in AutoHotkey first), starting entry
+   mode should surface a warning banner; Skip/copy still work.
+9. Finally, repeat step 2 inside TaxSlayer Pro's "exception to reporting each transaction"
+   entry screen and verify a full six-box return end-to-end.
 
 ## Roadmap
 
